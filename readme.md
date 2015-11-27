@@ -1,5 +1,5 @@
 ## Git-R-Dun
-[gunShowCat](https://github.com/Banjerr/gitRDun/blob/master/public/images/gunShowCat.png)
+![gunShowCat](https://github.com/Banjerr/gitRDun/blob/master/public/images/gunShowCat.png)
 
 'Cause sometimes you just need to Git-R-Dun
 

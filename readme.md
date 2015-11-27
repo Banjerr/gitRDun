@@ -1,4 +1,5 @@
 ## Git-R-Dun
+[![forthebadge](http://forthebadge.com/images/badges/for-sharks.svg)](http://forthebadge.com)
 ![gunShowCat](https://github.com/Banjerr/gitRDun/blob/master/public/images/gunShowCat.png)
 
 'Cause sometimes you just need to Git-R-Dun

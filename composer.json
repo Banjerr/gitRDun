@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "GitRDun",
+    "description": "A Laravel based app which connects to GitHub and turns issues into todos",
+    "keywords": ["github", "laravel", "issues", "repo", "todo"],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -13,7 +13,7 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "~2.1"
+        "phpspec/phpspec": "~2.1",
     },
     "autoload": {
         "classmap": [

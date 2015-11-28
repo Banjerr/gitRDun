@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('icomoon.eot?l8qywa');
+	src:url('icomoon.eot?l8qywa#iefix') format('embedded-opentype'),
+		url('icomoon.ttf?l8qywa') format('truetype'),
+		url('icomoon.woff?l8qywa') format('woff'),
+		url('icomoon.svg?l8qywa#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gunShowCat:before {
+	content: "\1f4aa";
+}
+

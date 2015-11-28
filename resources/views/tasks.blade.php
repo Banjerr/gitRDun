@@ -9,6 +9,11 @@
 <!-- TODO set up in the right way -->
 <a style="display:block;text-decoration:none; font-size:18px; font-family:'Ruda', sans-serif;text-align:center;" href="https://github.com/login/oauth/authorize/?client_id=37bb75932ff23a375233">Click here to get started</a>
 
+@if( ! empty( $code ) )
+    // echo get code
+    <p>{{$code}}</p>
+@endif
+
 <!-- Create Task Form... -->
 
 <!-- Current Tasks -->

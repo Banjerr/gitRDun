@@ -2,6 +2,9 @@
 
 use GitRDun\Task;
 use Illuminate\Http\Request;
+
+use SocialNorm\Exceptions\ApplicationRejectedException;
+use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -52,4 +55,19 @@ Route::delete('/task/{id}', function ($id) {
     Task::findOrFail($id)->delete();
 
     return redirect('/');
+});
+
+/**
+ * Get the code for their oAuth token
+ */
+Route::get('github/authorize', function() {
+    return SocialAuth::authorize('github');
+});
+
+/**
+ * Get the code for their oAuth token
+ */
+Route::get('github/login', function() {
+    SocialAuth::login('github');
+    return 'done';
 });

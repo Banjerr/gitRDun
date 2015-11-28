@@ -1,5 +1,6 @@
 ## Git-R-Dun
 [![forthebadge](http://forthebadge.com/images/badges/for-sharks.svg)](http://forthebadge.com)
+[![Deployment status from DeployBot](https://countryfriedcoders.deploybot.com/badge/34534836039594/55050.svg)](http://deploybot.com)
 ![gunShowCat](https://github.com/Banjerr/gitRDun/blob/master/public/images/gunShowCat.png)
 
 'Cause sometimes you just need to Git-R-Dun

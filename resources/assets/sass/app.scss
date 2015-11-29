@@ -1,2 +1,16 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+GENERAL
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.icon-gunShowCat {
+  font-size: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  color: #000;
+  &:before {
+    font-size: 80px;
+    vertical-align: middle;
+  }
+}

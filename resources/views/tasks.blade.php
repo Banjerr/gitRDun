@@ -10,9 +10,9 @@
     <a class="authenticateYourself" href="/github/authorize">Click here to get started</a>
 </section><!--.comingSoon-->
 
-@if( ! empty( $code ) )
+@if( ! empty( $user ) )
     // echo get code
-    <p>{{$code}}</p>
+    <p>{{$user->name}}</p>
 @endif
 
 <!-- Create Task Form... -->

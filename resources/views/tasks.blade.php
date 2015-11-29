@@ -1,13 +1,14 @@
 @extends('layouts.gitrdun')
 
 @section('content')
-<img style="display:block; text-align:center; margin:0 auto; width:80%; max-width: 830px;" src="/images/gunShowCat.png">
-<h1 style="font-family:'Ruda', sans-serif;text-align:center;">Git R Dun</h1>
-<h2 style="font-family:'Ruda', sans-serif;text-align:center;">- Coming Soon -</h2>
-<h2 style="font-family:'Ruda', sans-serif;text-align:center;"><a class="icon-gunShowCat" style="text-decoration: none;" target="_blank" href="//github.com/banjerr/gitrdun">GitHub</a></h2>
-
-<!-- TODO set up in the right way -->
-<a style="display:block;text-decoration:none; font-size:18px; font-family:'Ruda', sans-serif;text-align:center;" href="https://github.com/login/oauth/authorize/?client_id=37bb75932ff23a375233">Click here to get started</a>
+<section class="comingSoon">
+    <img alt="GunShowOctoCat" src="images/gunShowCat.png">
+    <h1>Git R Dun</h1>
+    <h2>- Coming Soon -</h2>
+    <h2><a class="icon-gunShowCat" target="_blank" href="//github.com/banjerr/gitrdun">GitHub</a></h2>
+    <!-- TODO set up in the right way -->
+    <a class="authenticateYourself" href="/github/authorize">Click here to get started</a>
+</section><!--.comingSoon-->
 
 @if( ! empty( $code ) )
     // echo get code

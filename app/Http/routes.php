@@ -68,6 +68,22 @@ Route::get('github/authorize', function() {
  * Get the code for their oAuth token
  */
 Route::get('github/login', function() {
-    SocialAuth::login('github');
-    return 'done';
+    try {
+        SocialAuth::login('github', function($user, $details) {
+            $user->nickname = $details->nickname;
+            $user->name = $details->full_name;
+            $user->profile_image = $details->avatar;
+            $user->save();
+        });
+    } catch (ApplicationRejectedException $e) {
+        // User rejected application
+    } catch (InvalidAuthorizationCodeException $e) {
+        // Authorization was attempted with invalid
+        // code,likely forgery attempt
+    }
+
+    // Current user is now available via Auth facade
+    $user = Auth::user();
+
+    return Redirect::intended();
 });

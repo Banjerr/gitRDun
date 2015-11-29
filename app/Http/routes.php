@@ -69,7 +69,7 @@ Route::get('github/authorize', function() {
  */
 Route::get('github/login', function() {
     try {
-        SocialAuth::login('github', function($userDetails) {
+        SocialAuth::login('github', function( $user, $userDetails ) {
             dd($userDetails);
         });
     } catch (ApplicationRejectedException $e) {

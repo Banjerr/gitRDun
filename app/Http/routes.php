@@ -69,11 +69,8 @@ Route::get('github/authorize', function() {
  */
 Route::get('github/login', function() {
     try {
-        SocialAuth::login('github', function($user, $details) {
-            $user->nickname = $details->nickname;
-            $user->name = $details->full_name;
-            $user->profile_image = $details->avatar;
-            $user->save();
+        SocialAuth::login('github', function($userDetails) {
+            dd($userDetails);
         });
     } catch (ApplicationRejectedException $e) {
         // User rejected application

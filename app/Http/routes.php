@@ -19,7 +19,16 @@ use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
  * Display All Tasks
  */
 Route::get('/', function () {
-    return view('home');
+
+    if (Auth::check()) {
+        // The user is logged in...
+        $user = Auth::user();
+        return view('home', ['fullname', $user->full_name]);
+    }
+    else
+    {
+        return view('home');
+    }
 });
 
 /**

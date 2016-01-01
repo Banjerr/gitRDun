@@ -45,8 +45,8 @@ Route::get('/dashboard', function () {
         // The user is logged in...
         $user = Auth::user();
         // Get their issues
-        $repo = GitHub::repo()->show($user->nickname);
-        dd($repo);
+        $issues = GitHub::issues()->all();
+        dd($issues);
 
         $data = array(
             'fullname' => $user->full_name,

@@ -70,9 +70,9 @@ Route::get('github/login', function() {
 
     SocialAuth::login('github', function( $user, $userDetails ) {
         $user->email = $userDetails->email;
+        $user->nickname = $userDetails->nickname;
+        $user->full_name = $userDetails->full_name;
         $user->save();
-
-        dd($userDetails);
     });
 
     // Current user is now available via Auth facade

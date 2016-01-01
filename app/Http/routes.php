@@ -23,7 +23,11 @@ Route::get('/', function () {
     if (Auth::check()) {
         // The user is logged in...
         $user = Auth::user();
-        return view('home', ['fullname', $user->full_name]);
+        $data = array(
+            'fullname' => $user->full_name,
+            'nickname' => $user->nickname,
+        );
+        return view('home')->with($data);
     }
     else
     {
@@ -39,7 +43,11 @@ Route::get('/dashboard', function () {
     if (Auth::check()) {
         // The user is logged in...
         $user = Auth::user();
-        return view('dashboard', ['nickname', $user->nickname]);
+        $data = array(
+            'fullname' => $user->full_name,
+            'nickname' => $user->nickname,
+        );
+        return view('dashboard')->with($data);
     }
     else
     {

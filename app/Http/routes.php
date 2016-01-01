@@ -75,6 +75,7 @@ Route::get('github/login', function() {
 
     // Current user is now available via Auth facade
     $user = Auth::user();
+    $userDetails = Auth::userDetails();
 
-    return 'done {{$user}}';
+    return 'Howdy there, ' . $user . '. Here\'s some more info.. ' . $userDetails;
 });

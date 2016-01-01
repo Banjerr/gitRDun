@@ -4,6 +4,7 @@ use GitRDun\Task;
 use Illuminate\Http\Request;
 use SocialNorm\Exceptions\ApplicationRejectedException;
 use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
+use GrahamCampbell\GitHub\Facades\GitHub;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -43,6 +44,10 @@ Route::get('/dashboard', function () {
     if (Auth::check()) {
         // The user is logged in...
         $user = Auth::user();
+        // Get their issues
+        $issues = GitHub::issues();
+        dd($issues);
+
         $data = array(
             'fullname' => $user->full_name,
             'nickname' => $user->nickname,

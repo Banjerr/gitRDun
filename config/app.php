@@ -146,6 +146,10 @@ return [
         GitRDun\Providers\EventServiceProvider::class,
         GitRDun\Providers\RouteServiceProvider::class,
 
+        /*
+         * Github API stuff
+         */
+        GrahamCampbell\GitHub\GitHubServiceProvider::class,
     ],
 
     /*
@@ -194,7 +198,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'SocialAuth' => AdamWathan\EloquentOAuth\Facades\OAuth::class,
-
+        'GitHub' => GrahamCampbell\GitHub\Facades\GitHub::class,
     ],
 
 ];

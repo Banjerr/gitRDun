@@ -71,12 +71,12 @@ Route::get('github/login', function() {
     SocialAuth::login('github', function( $user, $userDetails ) {
         $user->email = $userDetails->email;
         $user->save();
+
+        dd($userDetails);
     });
 
     // Current user is now available via Auth facade
     $user = Auth::user();
 
     return 'Howdy there, ' . $user;
-
-    dd($userDetails);
 });

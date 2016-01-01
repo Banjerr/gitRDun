@@ -16,7 +16,7 @@ use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
 */
 
 /**
- * Display All Tasks
+ * Display Home
  */
 Route::get('/', function () {
 
@@ -24,6 +24,22 @@ Route::get('/', function () {
         // The user is logged in...
         $user = Auth::user();
         return view('home', ['fullname', $user->full_name]);
+    }
+    else
+    {
+        return view('home');
+    }
+});
+
+/**
+ * Display Dashboard
+ */
+Route::get('/', function () {
+
+    if (Auth::check()) {
+        // The user is logged in...
+        $user = Auth::user();
+        return view('dashboard', ['nickname', $user->nickname]);
     }
     else
     {

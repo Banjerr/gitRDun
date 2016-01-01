@@ -7,7 +7,7 @@
     <h2>- Coming Soon -</h2>
     <h2><a class="icon-gunShowCat" target="_blank" href="//github.com/banjerr/gitrdun">GitHub</a></h2>
     <!-- TODO set up in the right way -->
-    <a class="authenticateYourself" href="/github/login">Click here to get started</a>
+    <a class="authenticateYourself" href="/github/authorize">Click here to get started</a>
 </section><!--.comingSoon-->
 
 <!-- Create Task Form... -->

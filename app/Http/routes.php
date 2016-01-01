@@ -2,7 +2,6 @@
 
 use GitRDun\Task;
 use Illuminate\Http\Request;
-
 use SocialNorm\Exceptions\ApplicationRejectedException;
 use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
 /*
@@ -68,20 +67,14 @@ Route::get('github/authorize', function() {
  * Get the code for their oAuth token
  */
 Route::get('github/login', function() {
-    try {
-        SocialAuth::login('github', function( $user, $userDetails ) {
-            $user->email = $userDetails->email;
-            $user->save();
-        });
-    } catch (ApplicationRejectedException $e) {
-        // User rejected application
-    } catch (InvalidAuthorizationCodeException $e) {
-        // Authorization was attempted with invalid
-        // code,likely forgery attempt
-    }
+
+    SocialAuth::login('github', function( $user, $userDetails ) {
+        $user->email = $userDetails->email;
+        $user->save();
+    });
 
     // Current user is now available via Auth facade
     $user = Auth::user();
 
-    return Redirect::intended();
+    return 'done {{$user}}';
 });

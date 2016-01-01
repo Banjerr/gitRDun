@@ -19,17 +19,15 @@ use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
  * Display All Tasks
  */
 Route::get('/', function () {
-    $tasks = Task::orderBy('created_at', 'asc')->get();
-
-    return view('tasks', [
-        'tasks' => $tasks
-    ]);
+    return view('home');
 });
 
 /**
  * Add A New Task
  */
 Route::post('/task', function (Request $request) {
+    $tasks = Task::orderBy('created_at', 'asc')->get();
+
     $validator = Validator::make($request->all(), [
         'name' => 'required|max:255',
     ]);
@@ -44,7 +42,9 @@ Route::post('/task', function (Request $request) {
     $task->name = $request->name;
     $task->save();
 
-    return redirect('/');
+    return view('tasks', [
+        'tasks' => $tasks
+    ]);
 });
 
 /**
@@ -78,5 +78,5 @@ Route::get('github/login', function() {
     // Current user is now available via Auth facade
     $user = Auth::user();
 
-    return 'Howdy there, ' . $user;
+    return view('dashboard', ['nickname' => $user->nickname]);
 });

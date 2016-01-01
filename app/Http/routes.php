@@ -34,7 +34,7 @@ Route::get('/', function () {
 /**
  * Display Dashboard
  */
-Route::get('/', function () {
+Route::get('/dashboard', function () {
 
     if (Auth::check()) {
         // The user is logged in...

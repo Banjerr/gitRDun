@@ -10,10 +10,9 @@
     @if (Auth::check())
         <h2>Howdy <?php echo $nickname; ?></h2>
         <p>Check out the <a href="/dashboard">Dashboard</a></p>
-    @endif
-    @unless (Auth::check())
+    @elseif
         <a class="authenticateYourself" href="/github/authorize">Click here to get started</a>
-    @endunless
+    @endif
 
 </section><!--.comingSoon-->
 @endsection

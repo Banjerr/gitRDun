@@ -77,5 +77,5 @@ Route::get('github/login', function() {
     $user = Auth::user();
     $userDetails = Auth::userDetails();
 
-    return 'Howdy there, ' . $user . '. Here\'s some more info.. ' . $userDetails;
+    return 'Howdy there, ' . $user;
 });

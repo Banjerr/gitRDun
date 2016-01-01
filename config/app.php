@@ -149,7 +149,7 @@ return [
         /*
          * Github API stuff
          */
-        'GrahamCampbell\GitHub\GitHubServiceProvider',
+        GrahamCampbell\GitHub\GitHubServiceProvider::classgit,
     ],
 
     /*
@@ -198,7 +198,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'SocialAuth' => AdamWathan\EloquentOAuth\Facades\OAuth::class,
-        'GitHub' => 'GrahamCampbell\GitHub\Facades\GitHub',
+        'GitHub' => GrahamCampbell\GitHub\Facades\GitHub::class,
     ],
 
 ];

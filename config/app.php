@@ -149,7 +149,7 @@ return [
         /*
          * Github API stuff
          */
-        GrahamCampbell\GitHub\GitHubServiceProvider::classgit,
+        GrahamCampbell\GitHub\GitHubServiceProvider::class,
     ],
 
     /*

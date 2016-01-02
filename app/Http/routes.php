@@ -52,7 +52,7 @@ Route::get('/dashboard', function () {
         );
 
         // Get their issues
-        $issues = GitHub::repos($user->nickname)->all();
+        $issues = GitHub::repos($user->nickname);
         dd($issues);
 
 

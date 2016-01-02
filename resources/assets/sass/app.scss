@@ -5,6 +5,7 @@ GENERAL
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 .comingSoon {
+
   img {
     display:block;
     text-align:center;
@@ -12,23 +13,30 @@ GENERAL
     width:80%;
     max-width: 830px;
   }
+
   .icon-gunShowCat {
     font-size: 40px;
     vertical-align: middle;
     display: inline-block;
     color: #000;
+
     &:before {
       font-size: 80px;
       vertical-align: middle;
     }
+
   }
+
   h1,h2,h3 {
     font-family:'Ruda', sans-serif;
     text-align:center;
+
     a {
       text-decoration: none;
     }
+
   }
+
   .authenticateYourself {
     display:block;
     text-decoration:none;
@@ -36,5 +44,12 @@ GENERAL
     font-family:'Ruda', sans-serif;
     text-align:center;
   }
+
+  .userAvatar {
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 14px #000;
+  }
+
 }
 

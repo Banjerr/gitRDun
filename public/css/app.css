@@ -5781,4 +5781,9 @@ GENERAL
   font-family: 'Ruda', sans-serif;
   text-align: center; }
 
+.comingSoon .userAvatar {
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 14px #000; }
+
 /*# sourceMappingURL=app.css.map */

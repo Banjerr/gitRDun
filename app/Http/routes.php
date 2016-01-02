@@ -44,14 +44,18 @@ Route::get('/dashboard', function () {
     if (Auth::check()) {
         // The user is logged in...
         $user = Auth::user();
-        // Get their issues
-        $issues = GitHub::repos()->all();
-        dd($issues);
 
+        // Get their info
         $data = array(
             'fullname' => $user->full_name,
             'nickname' => $user->nickname,
         );
+
+        // Get their issues
+        $issues = GitHub::repos()->currentUser()->all();
+        dd($issues);
+
+
         return view('dashboard')->with($data);
     }
     else

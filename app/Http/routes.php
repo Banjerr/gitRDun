@@ -27,6 +27,7 @@ Route::get('/', function () {
         $data = array(
             'fullname' => $user->full_name,
             'nickname' => $user->nickname,
+            'avatar'   => $user->avatar,
         );
         return view('home')->with($data);
     }
@@ -49,18 +50,13 @@ Route::get('/dashboard', function () {
         $data = array(
             'fullname' => $user->full_name,
             'nickname' => $user->nickname,
+            'avatar'   => $user->avatar,
         );
 
-        // authorize the user to make calls that require authorization
-        SocialAuth::login('github', function( $userDetails ) {
-            $usernameOrToken = $userDetails->access_token;
-            $method = Github\Client::AUTH_URL_TOKEN;
+        // Get their issues
+        $issues = GitHub::user()->repositories($user->nickname);;
+        dd($issues);
 
-            // authorize the current user
-            GitHub::authenticate($usernameOrToken, $method);
-
-            $newRepo = Github::repo()->create('test', 'test repo made with api', 'http://countryfriedcoders.me', true);
-        });
 
         return view('dashboard')->with($data);
     }
@@ -127,5 +123,11 @@ Route::get('github/login', function() {
     // Current user is now available via Auth facade
     $user = Auth::user();
 
-    return view('dashboard', ['nickname' => $user->nickname]);
+    $data = array(
+        'fullname' => $user->full_name,
+        'nickname' => $user->nickname,
+        'avatar'   => $user->avatar,
+    );
+
+    return view('dashboard')->with($data);
 });

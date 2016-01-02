@@ -53,14 +53,13 @@ Route::get('/dashboard', function () {
 
         // authorize the user to make calls that require authorization
         SocialAuth::login('github', function( $userDetails ) {
-            $access_token = $userDetails->access_token;
+            $usernameOrToken = $userDetails->access_token;
             $method = Github\Client::AUTH_URL_TOKEN;
 
             // authorize the current user
-            GitHub::authenticate($access_token, $method);
+            GitHub::authenticate($usernameOrToken, $method);
 
             $newRepo = Github::repo()->create('test', 'test repo made with api', 'http://countryfriedcoders.me', true);
-            $newRepo;
         });
 
         return view('dashboard')->with($data);

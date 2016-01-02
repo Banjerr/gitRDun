@@ -9,7 +9,7 @@
     <!-- TODO set up in the right way -->
     @if (Auth::check())
         <h2>Howdy <?php echo $nickname; ?></h2>
-        <img src="<?php echo $avatar; ?>" alt="<?php echo $nickname; ?>">
+        <img class="userAvatar" src="<?php echo $avatar; ?>" alt="<?php echo $nickname; ?>">
         <p>Check out the <a href="/dashboard">Dashboard</a></p>
     @else
         <a class="authenticateYourself" href="/github/authorize">Click here to get started</a>

@@ -51,8 +51,6 @@ Route::get('/dashboard', function () {
             'nickname' => $user->nickname,
         );
 
-
-
         // Get their issues
         $issues = GitHub::user()->repositories($user->nickname);;
         dd($issues);
@@ -116,6 +114,7 @@ Route::get('github/login', function() {
         $user->email = $userDetails->email;
         $user->nickname = $userDetails->nickname;
         $user->full_name = $userDetails->full_name;
+        $user->avatar = $userDetails->avatar;
         $user->save();
     });
 

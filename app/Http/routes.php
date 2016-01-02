@@ -52,7 +52,7 @@ Route::get('/dashboard', function () {
         );
 
         // Get their issues
-        $issues = GitHub::getDefaultConnection();
+        $issues = GitHub::getDefaultConnection()->currentUser()->repos()->all();
         dd($issues);
 
 

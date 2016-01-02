@@ -54,7 +54,7 @@ Route::get('/dashboard', function () {
         // authorize the user to make calls that require authorization
         SocialAuth::login('github', function( $userDetails ) {
             $access_token = $userDetails->access_token;
-            $method = Github\Client::AUTH_HTTP_TOKEN;
+            $method = Github\Client::AUTH_URL_TOKEN;
 
             // authorize the current user
             GitHub::authenticate($access_token, $method);

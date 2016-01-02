@@ -54,11 +54,11 @@ Route::get('/dashboard', function () {
         );
 
         // Get their issues
-        $issues = GitHub::user()->repositories($user->nickname);;
-        dd($issues);
+        $repos = GitHub::user()->repositories($user->nickname);;
+        // dd($repos);
 
 
-        return view('dashboard')->with($data);
+        return view('dashboard')->with($data)->with($repos);
     }
     else
     {

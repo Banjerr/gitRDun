@@ -8,8 +8,15 @@
     <!-- CSS And JavaScript -->
 </head>
 
+<header>
+    <!--TODO HEADER GOES HERE-->
+</header>
+
 <body>
     @yield('content')
 </body>
 
+<footer>
+    <!--TODO FOOTER GOES HERE-->
+</footer>
 </html>

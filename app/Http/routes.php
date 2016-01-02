@@ -51,6 +51,8 @@ Route::get('/dashboard', function () {
             'nickname' => $user->nickname,
         );
 
+
+
         // Get their issues
         $issues = GitHub::user()->repositories($user->nickname);;
         dd($issues);

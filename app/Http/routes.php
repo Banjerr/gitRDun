@@ -52,7 +52,7 @@ Route::get('/dashboard', function () {
         );
 
         // Get their issues
-        $issues = GitHub::repos()->find('chess', array('language' => 'php'));;
+        $issues = GitHub::user($user->nickname)->repositories();;
         dd($issues);
 
 

@@ -8,6 +8,7 @@
     foreach($repos as $repo)
     {
         $withIssues = array();
+        dd($repo);
         while($repo['has_issues'] == true)
         {
             echo $repo{full_name];

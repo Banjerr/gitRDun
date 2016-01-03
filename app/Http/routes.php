@@ -58,10 +58,11 @@ Route::get('/dashboard', function () {
         // if has_issues is true add it to the array
         foreach($repos as $repo)
         {
-            $withIssues = [];
-            while('has_issues' == true)
+            $withIssues = array();
+            while($repo['has_issues'] == true)
             {
-                array_push( $withIssues, $this );
+                $withIssues[] = $repo;
+                //array_push( $withIssues, $this );
             }
         }
         dd($withIssues);

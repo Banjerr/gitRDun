@@ -55,7 +55,7 @@ Route::get('/dashboard', function () {
 
         // Get their issues
         $repos = GitHub::user()->repositories($user->nickname);;
-        // dd($repos);
+        dd($repos);
 
 
         return view('dashboard')->with($data)->with($repos);

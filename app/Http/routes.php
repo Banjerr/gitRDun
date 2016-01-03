@@ -55,17 +55,8 @@ Route::get('/dashboard', function () {
 
         // Get the repos for the authenticated user
         $repos = GitHub::user()->repositories($user->nickname);
-        // if has_issues is true add it to the array
-        foreach($repos as $repo)
-        {
-            $withIssues = array();
-            while($repo['has_issues'] == true)
-            {
-                $withIssues['name'] = $repo['name'];
-                //array_push( $withIssues, $this );
-            }
-        }
-        dd($withIssues);
+
+        dd($repos);
 
         return view('dashboard')->with($data)->with($repos);
     }

@@ -61,7 +61,7 @@ Route::get('/dashboard', function () {
             $withIssues = array();
             while($repo['has_issues'] == true)
             {
-                $withIssues[] .= $repo;
+                $withIssues['name'] = $repo['name'];
                 //array_push( $withIssues, $this );
             }
         }

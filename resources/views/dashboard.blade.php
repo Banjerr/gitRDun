@@ -10,9 +10,12 @@
         $withIssues = array();
         while($repo['has_issues'] == true)
         {
-            $withIssues[] = $repo['name'];
+            echo $repo{full_name];
+            $withIssues['name'] = $repo['full_name'];
             //array_push( $withIssues, $this );
         }
     }
+
+    print_r($withIssues);
     ?>
 @endsection

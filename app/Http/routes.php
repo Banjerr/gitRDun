@@ -127,5 +127,8 @@ Route::get('github/login', function() {
         'avatar'   => $user->avatar,
     );
 
-    return view('dashboard')->with($data);
+    // Get the repos for the authenticated user
+    $repos = GitHub::user()->repositories($user->nickname);
+
+    return view('dashboard')->with($data)->with($repos);
 });

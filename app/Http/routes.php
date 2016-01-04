@@ -129,6 +129,6 @@ Route::get('github/login', function() {
 
     // Get the repos for the authenticated user
     $repos = GitHub::user()->repositories($user->nickname);
-
+    dd($repos);
     return view('dashboard')->with($data)->with($repos);
 });

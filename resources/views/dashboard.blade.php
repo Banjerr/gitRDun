@@ -1,8 +1,8 @@
 @extends('layouts.gitrdun')
 
 @section('content')
-    <h2>Howdy <?php echo $nickname; ?></h2>
-    <img class="userAvatar" src="<?php echo $avatar; ?>" alt="<?php echo $nickname; ?>">
+    <h2>Howdy <?php echo $data['nickname']; ?></h2>
+    {{--<img class="userAvatar" src="<?php echo $avatar; ?>" alt="<?php echo $nickname; ?>">--}}
     {{--@if ($repos)--}}
         {{--<?php--}}
             {{--foreach ($repos as $repo)--}}

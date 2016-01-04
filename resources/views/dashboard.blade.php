@@ -9,7 +9,7 @@
             {
                 while ($repo['full_name'])
                 {
-                    echo $repo;
+                    print_r($repo);
                 }
             }
         ?>

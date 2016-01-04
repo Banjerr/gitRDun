@@ -55,7 +55,8 @@ Route::get('/dashboard', function () {
 
         // Get the repos for the authenticated user
         $repos = GitHub::user()->repositories($user->nickname);
-        dd($repos);
+
+        dd($repos[0]['full_name']);
         return view('dashboard')->with($data)->with($repos);
     }
     else

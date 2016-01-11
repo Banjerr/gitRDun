@@ -132,3 +132,10 @@ Route::get('github/login', function() {
 
     return view('dashboard')->with($data)->with($repos);
 });
+
+/**
+ * For SSL
+ */
+Route::get('github/authorize', function() {
+    return SocialAuth::authorize('github');
+});

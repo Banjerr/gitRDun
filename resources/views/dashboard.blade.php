@@ -8,9 +8,12 @@
         <?php
         foreach ($repos as $repo)
         {
-            echo '<pre>';
-            print_r($repo);
-            echo '</pre>';
+            if ($repo['open_issues'] > 0)
+            {
+                echo '<pre>';
+                print_r($repo);
+                echo '</pre>';
+            }
         }
         ?>
     @else

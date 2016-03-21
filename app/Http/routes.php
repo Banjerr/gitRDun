@@ -139,3 +139,10 @@ Route::get('github/login', function() {
 Route::get('github/authorize', function() {
     return SocialAuth::authorize('github');
 });
+
+/**
+ * Ember app stuff
+ */
+Route::get('{ember?}', function() {
+    return View::make('ember');
+})->where('ember', '.*');

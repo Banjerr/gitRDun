@@ -8,7 +8,7 @@
         <?php
         foreach ($repos as $repo)
         {
-            print_r($repo['full_name']);
+            print_r($repo);
         }
         ?>
     @else

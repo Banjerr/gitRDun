@@ -17,6 +17,6 @@
         {{--}--}}
         {{--?>--}}
     {{--@else--}}
-        <p>No repos yet</p>
-    @endif
+        {{--<p>No repos yet</p>--}}
+    {{--@endif--}}
 @endsection

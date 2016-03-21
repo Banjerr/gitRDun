@@ -8,7 +8,9 @@
         <?php
         foreach ($repos as $repo)
         {
+            echo '<pre>';
             print_r($repo);
+            echo '</pre>';
         }
         ?>
     @else

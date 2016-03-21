@@ -1,8 +1,8 @@
 @extends('layouts.gitrdun')
 
 @section('content')
-    <h2>Howdy {{ $nickname }}</h2>
-    <img class="userAvatar" src="{{ $avatar }}" alt="{{ $nickname }}">
+    <h2>Howdy {{ $data['nickname'] }}</h2>
+    <img class="userAvatar" src="{{ $data['avatar'] }}" alt="{{ $data['nickname'] }}">
 
     <?php dd($repos); ?>
 

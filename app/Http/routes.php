@@ -143,6 +143,6 @@ Route::get('github/authorize', function() {
 /**
  * Ember app stuff
  */
-Route::get('{ember?}', function() {
-    return View::make('ember');
-})->where('ember', '.*');
+Route::get('{data?}', function() {
+    return View::make('app');
+})->where('data', '.*');

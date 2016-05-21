@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://gitrdun.countryfriedcoders.me',
+    'url' => 'http://gitapi.countryfriedcoders.me',
 
     /*
     |--------------------------------------------------------------------------

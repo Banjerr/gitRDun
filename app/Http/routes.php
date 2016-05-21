@@ -43,7 +43,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
 
     if (Auth::check()) {
-        // The user is logged in...
+        // The user is logged in... 
         $user = Auth::user();
 
         // Get their info
